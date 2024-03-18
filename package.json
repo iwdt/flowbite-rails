@@ -1,0 +1,18 @@
+{
+  "name": "flowbite-rails",
+  "module": "bun.config.js",
+  "type": "module",
+  "scripts": {
+    "build:css": "BUN_ENV=production NODE_ENV=production postcss assets/stylesheets/flowbite.css --use postcss-import --no-map --minify -o assets/builds/flowbite.css",
+    "build:js": "BUN_ENV=production NODE_ENV=production bun run config/bun.config.js"
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1",
+    "tailwindcss": "^3.4.1"
+  }
+}

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  flowbite-rails:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/home/developer/flowbite-rails:cached
+    command: sleep infinity
+    environment:
+      - TZ=Europe/Moscow
+    user: developer

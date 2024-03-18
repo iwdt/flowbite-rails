@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - 'dependabot/**'
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    name: Ruby ${{ matrix.ruby }}
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu
+        ruby:
+          - '3.0.6'
+          - '3.1.4'
+          - '3.2.3'
+          - '3.3.0'
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+    - name: Lint with Rubocop
+      run: bundle exec rubocop
+    - name: Testing
+      run: bin/test

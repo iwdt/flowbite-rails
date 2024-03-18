@@ -1,0 +1,29 @@
+{
+	"name": "Flowbite for Rails",
+	"service": "flowbite-rails",
+	"dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/home/developer/flowbite-rails",
+	"forwardPorts": [3000],
+	"remoteUser": "developer",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"[ruby]": {
+					"editor.defaultFormatter": "Shopify.ruby-lsp"
+				},
+				"rubyLsp.rubyVersionManager": "none",
+				"rubyLsp.formatter": "rubocop",
+				"rubyLsp.yjit": true,
+				"rubyLsp.enableExperimentalFeatures": true,
+				"steep.enabled": true
+			},
+			"extensions": [
+				"Shopify.ruby-lsp",
+				"KoichiSasada.vscode-rdbg",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"soutaro.rbs-syntax",
+				"soutaro.steep-vscode"
+			]
+		}
+	}
+}
