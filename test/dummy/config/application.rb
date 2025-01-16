@@ -19,7 +19,7 @@ require 'rails/test_unit/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-require "propshaft"
+require 'propshaft'
 
 module Dummy
   class Application < Rails::Application
