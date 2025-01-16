@@ -41,11 +41,18 @@ bin/rails flowbite:bundler:plugin
 it's copy a `plugin.js` to `vendor/javascript/flowbite` folder. To start using it, just require flowbite as plugin inside the `config/tailwind.config.js` file
 
 ```js
+const flowbite = require("../vendor/javascript/flowbite/plugin.js")
+
 module.exports = {
+  // ...
+  content: [
+      // ...
+      flowbite.interactiveContent
+  ],
   // ...
   plugins: [
     // ...
-    require("../vendor/javascript/flowbite/plugin.js")
+    flowbite.plugin
   ]
   // ...
 }
@@ -53,7 +60,7 @@ module.exports = {
 
 ### Classic way
 
-This gem automatically registers `flowbite.js`, `flowbite-plugin.js`, `flowbite.esm.js`, and `flowbite.css` dependencies in your asset pipeline. Now you can use them in your project.
+This gem automatically registers `flowbite.turbo.js`, `flowbite.turbo.esm.js`, `flowbite.js`, `flowbite-datepicker.js`, `flowbite-datepicker.esm.js`, `flowbite-plugin.js`, `flowbite.esm.js`, and `flowbite.css` dependencies in your asset pipeline. Now you can use them in your project.
 
 As a dependency through [*Sprockets*](https://github.com/rails/sprockets-rails), add the following code to your `application.js`:
 

@@ -1,7 +1,11 @@
 export const config = {
   entrypoints: [
     "assets/javascripts/flowbite.js",
+    "assets/javascripts/flowbite.turbo.js",
+    "assets/javascripts/flowbite.turbo.esm.js",
     "assets/javascripts/flowbite-plugin.js",
+    "assets/javascripts/flowbite-datepicker.js",
+    "assets/javascripts/flowbite-datepicker.esm.js",
     "assets/javascripts/flowbite.esm.js"
   ],
   outdir: "assets/builds",

@@ -3,7 +3,7 @@
 namespace :flowbite do
   namespace :bundler do
     desc 'Download flowbite plugin for usage with standalone Tailwind CSS'
-    task :plugin do
+    task :plugin do # rubocop:disable Rails/RakeEnvironment
       plugin_path = Flowbite::Engine.root.join('assets/builds/flowbite-plugin.js')
       target_path = Rails.root.join('vendor/')
 

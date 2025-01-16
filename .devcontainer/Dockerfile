@@ -22,7 +22,7 @@ RUN adduser ${USERNAME} --disabled-password --quiet && \
 USER ${USERNAME}
 
 # Install bunjs
-RUN curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.31"
+RUN curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.43"
 
 # Install ruby utilities
 RUN gem install debug:1.9.1 yard:0.9.34
