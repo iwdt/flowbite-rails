@@ -20,7 +20,7 @@ Works great with the following gems:
 Add `flowbite` to your Gemfile:
 
 ```ruby
-gem "flowbite", "~> 2.3"
+gem "flowbite", "~> 2.5"
 ```
 
 ### Importmaps
