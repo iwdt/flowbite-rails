@@ -20,7 +20,7 @@ Works great with the following gems:
 Add `flowbite` to your Gemfile:
 
 ```ruby
-gem "flowbite", "~> 2.5"
+gem "flowbite", "~> 3.1"
 ```
 
 ### Importmaps
@@ -31,6 +31,9 @@ pin "flowbite", to: "flowbite.esm.js"
 ```
 
 ### Tailwind CSS for Rails
+
+> [!WARNING]
+> To upgrade from flowbite 2.x to 3.x, also upgrade tailwind from version 3 to version 4 [using these instructions](https://github.com/rails/tailwindcss-rails/tree/v4.0.0#upgrading-your-application-from-tailwind-v3-to-v4). Don't forget to update the plugin using the `bin/rails flowbite:bundler:plugin` command.
 
 [Tailwind CSS for Rails gem](https://github.com/rails/tailwindcss-rails) is wraps the [standalone executable version](https://tailwindcss.com/blog/standalone-cli) of the Tailwind CSS framework, which means to add additional plugins you need to download the script to your server. To solve this problem, we wrote a rake task:
 

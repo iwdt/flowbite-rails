@@ -9,7 +9,7 @@ gemspec
 gem 'propshaft'
 gem 'puma'
 gem 'rails', '~> 7.1', require: false
-gem 'tailwindcss-rails'
+gem 'tailwindcss-rails', '~> 4.0'
 
 gem 'rubocop'
 gem 'rubocop-rails'
